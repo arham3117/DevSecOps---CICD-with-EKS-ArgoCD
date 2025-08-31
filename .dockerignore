@@ -1,0 +1,62 @@
+# Git files and directories
+.git
+.gitignore
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts (exclude from Docker build context)
+target/
+*.jar
+*.war
+
+# Logs
+*.log
+logs/
+
+# Documentation
+README.md
+docs/
+
+# Docker files (don't copy Dockerfile into itself)
+Dockerfile
+.dockerignore
+
+# CI/CD files
+.github/
+Jenkinsfile
+.gitlab-ci.yml
+
+# Terraform files (if any)
+*.tf
+*.tfstate
+*.tfstate.backup
+
+# Test files and coverage reports
+test-results/
+coverage/
+*.test
+
+# Node modules (if any frontend assets)
+node_modules/
+npm-debug.log
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.swp
+*.swo
+
+# Environment files (security)
+.env
+.env.local
+.env.production

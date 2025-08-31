@@ -31,3 +31,55 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### Security - Keys and Sensitive Files ###
+# SSH Keys - NEVER commit these
+*.pem
+*.key
+*.pub
+*-key
+*-key.pub
+*_key
+*_key.pub
+
+# Environment files with secrets
+.env
+.env.local
+.env.production
+.env.staging
+*.env
+
+# AWS credentials
+.aws/
+aws-credentials*
+credentials
+
+# Terraform sensitive files
+Terraform/.terraform/
+Terraform/.terraform.lock.hcl
+Terraform/terraform.tfstate
+Terraform/terraform.tfstate.backup
+Terraform/*.tfvars
+Terraform/terraform.tfplan
+Terraform/*.auto.tfvars
+
+# Docker secrets
+docker-compose.override.yml
+.docker/
+
+# Database credentials
+database.properties
+db-config.yml
+
+# Logs that might contain sensitive data
+*.log
+logs/
+
+### OS Files ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
