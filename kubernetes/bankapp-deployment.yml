@@ -1,0 +1,30 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: bankapp-deployment
+  namespace: bankapp-namespace
+  labels:
+    app: bankapp-deploy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bankapp-deploy
+  template:
+    metadata:
+      labels:
+        app: bankapp-deploy
+    spec:
+      containers:
+        - name: bankapp-container
+          image: arham123/
+          ports:
+            - containerPort: 8080
+          resources:
+            requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
+              memory: "512Mi"
+              cpu: "500m"
+          env:
